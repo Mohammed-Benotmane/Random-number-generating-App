@@ -25,7 +25,7 @@ public class Calcule extends Fragment {
         }
         return s;
     }
-
+//
     public int pseudo(int val, int m, int a, int c) {
         int x;
         int i = 1;
