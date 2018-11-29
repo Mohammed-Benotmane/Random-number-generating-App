@@ -1,23 +1,23 @@
 package com.example.mohammed_benotmane.pseudo;
 
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.concurrent.TimeUnit;
-
-public class MainActivity extends AppCompatActivity {
-
+public class Calcule extends Fragment {
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.activity_main,container,false);
+        return root;
     }
-
     public int puissance(int x, int n) {
         int s = 1;
         for (int i = 1; i <= n; i++) {
@@ -54,12 +54,12 @@ public class MainActivity extends AppCompatActivity {
     static int j;
 
     public void moh(View view) {
-        textView = findViewById(R.id.textView2);
-        koulchi = findViewById(R.id.textView);
-        EditText editTextA = findViewById(R.id.a);
-        EditText editTextC = findViewById(R.id.c);
-        EditText editTextM = findViewById(R.id.m);
-        EditText editTextX = findViewById(R.id.x);
+        koulchi = view.findViewById(R.id.textView);
+        EditText editTextA = view.findViewById(R.id.a);
+        textView = view.findViewById(R.id.textView2);
+        EditText editTextC = view.findViewById(R.id.c);
+        EditText editTextM = view.findViewById(R.id.m);
+        EditText editTextX = view.findViewById(R.id.x);
         s = "";
         a = Integer.parseInt(editTextA.getText().toString());
         c = Integer.parseInt(editTextC.getText().toString());
@@ -100,5 +100,4 @@ public class MainActivity extends AppCompatActivity {
             }, 1000);
        //}*/
     }
-
 }
