@@ -90,14 +90,5 @@ public class Calcule extends Fragment {
         }
         koulchi.setText(s);
 
-        /*
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    s += String.valueOf(x0) + " ";
-                    x0 = pseudo(x0, m, a, c);
-                    textView.setText(s);
-                }
-            }, 1000);
-       //}*/
     }
 }
