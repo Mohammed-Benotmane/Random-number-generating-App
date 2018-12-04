@@ -8,14 +8,29 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Calcule extends Fragment {
+public class Calcule extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.activity_main,container,false);
+        editTextA= root.findViewById(R.id.a);
+        editTextC= root.findViewById(R.id.c);
+        editTextX= root.findViewById(R.id.x);
+        editTextM= root.findViewById(R.id.m);
+        koulchi = root.findViewById(R.id.textView);
+        textView = root.findViewById(R.id.textView2);
+
+        Button button = root.findViewById(R.id.calcule);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moh1();
+            }
+        });
         return root;
     }
     public int puissance(int x, int n) {
@@ -49,17 +64,17 @@ public class Calcule extends Fragment {
     int a, c, x0, m;
     TextView textView;
     TextView koulchi;
+    EditText editTextA;
+    EditText editTextC;
+    EditText editTextM;
+    EditText editTextX;
     Runnable run;
     String s;
     static int j;
 
-    public void moh(View view) {
-        koulchi = view.findViewById(R.id.textView);
-        EditText editTextA = view.findViewById(R.id.a);
-        textView = view.findViewById(R.id.textView2);
-        EditText editTextC = view.findViewById(R.id.c);
-        EditText editTextM = view.findViewById(R.id.m);
-        EditText editTextX = view.findViewById(R.id.x);
+    public void moh1() {
+
+
         s = "";
         a = Integer.parseInt(editTextA.getText().toString());
         c = Integer.parseInt(editTextC.getText().toString());
@@ -89,6 +104,11 @@ public class Calcule extends Fragment {
             x0 = pseudo(x0, m, a, c);
         }
         koulchi.setText(s);
+
+    }
+
+    @Override
+    public void onClick(View v) {
 
     }
 }

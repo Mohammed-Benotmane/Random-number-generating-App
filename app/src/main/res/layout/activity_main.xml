@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,10 +8,9 @@
     tools:context=".Calcule">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/calcule"
         android:layout_width="386dp"
         android:layout_height="63dp"
-        android:onClick="moh"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,13 +89,13 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="115dp"
-        android:layout_height="179dp"
+        android:layout_height="165dp"
         android:layout_marginStart="131dp"
         android:layout_marginEnd="130dp"
         android:text="N"
         android:textColor="#000"
         android:textSize="150sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/calcule"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent" />
